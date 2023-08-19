@@ -1,0 +1,82 @@
+@import "../../sass/abstracts/variables";
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 101rem;
+  padding-block: 1.6rem;
+  margin-bottom: 3rem;
+}
+
+.btn {
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 3.3rem;
+  color: $color-grey-500;
+  border: none;
+  background-color: transparent;
+  margin-inline: 4.6rem;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    color: $color-grey-400;
+    transform: translateY(-2px);
+  }
+  &:active {
+    transform: translateY(2px);
+  }
+}
+
+.pagination {
+  & > *:not(:first-child) {
+    margin-left: 1rem;
+  }
+
+  & * {
+    transition: all 0.5s;
+    text-decoration: none;
+    display: inline-block;
+    color: $color-grey-400;
+    font-style: italic;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.5rem;
+    cursor: pointer;
+  }
+
+  & *:hover {
+    color: $color-grey-400;
+    transform: translateY(-2px);
+  }
+
+  & *:active {
+    transform: translateY(2px);
+  }
+}
+
+.active {
+  color: $color-green-100;
+
+  &:hover {
+    color: $color-green-200;
+  }
+}
+
+/**************************/
+/* BELOW 688px */
+/**************************/
+@media (max-width: 43em) {
+  .btn {
+    margin-inline: 2.5rem;
+  }
+}
+
+/**************************/
+/* BELOW 512px */
+/**************************/
+@media (max-width: 32em) {
+  .btn {
+    margin-inline: 2rem;
+  }
+}
